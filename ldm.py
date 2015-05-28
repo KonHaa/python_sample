@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# this little piece of code is written to be executed by
+# this little piece of code is written to be executed
 # as a cronjob or by incron.
 # with this combination you can monitor a logfile
 # and send an email that contains the new log entries.
 
 
 # start it with 2 args:
-# first arg is the logfile you want to monitor
-# second arg is the recipient who should recieve an email
+# the first arg is the logfile you want to monitor
+# the second arg is the recipient who should recieve an email
 # that contains the new log entries
 
 # if the linecount between 2 runtimes differs it will
@@ -41,14 +41,14 @@ path_to_passwdfile = 'pass.txt'
 # mail settings   #
 #-----------------#
 
-#sender's mail adress
+#sender's mail address
 sender = ''
 #sender's smtp-server 
 smtpserver = ''
 #sender's username for the mail-account
 smtpusername = ''
-#the emails subject
-subject = 'new entries in in your observed logfile'
+#the email's subject
+subject = 'new entries in your monitored logfile'
 #use tls?
 usetls = True
 
@@ -112,7 +112,7 @@ def save_linecount(new_linecount):
 	target.close()
 
 #---------------------------#
-# function to send a mail	#
+# function to send a mail   #
 #---------------------------#
 
 def sendmail(recipient,subject,content):
