@@ -58,8 +58,9 @@ usetls = True
 
 def get_old_linecount():
 	target = open(storagefile, 'r')	
-	return int(target.read())
 	target.close()
+	return int(target.read())
+
 
 old_linecount = get_old_linecount()
 
@@ -88,8 +89,9 @@ def read_new_lines(logfile,firstline,lastline):
 		else:
 			new_lines = new_lines + linecache.getline(logfile, current_line)
 		current_line += 1
-	return new_lines
 	target.close()
+	return new_lines
+
 
 #-------------------------------#
 # function to get the password	#
